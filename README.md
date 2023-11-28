@@ -10,7 +10,7 @@ The Swift Package Manager is the current installation method for the WHStack.
 
 1. Open your project in Xcode
 2. File > Add Package Dependencies...
-3. Copy the repo URL: `https://github.com/benjaminRoberts01375/SwiftUI-Bottom-Drawer/`
+3. Copy the repo URL: `https://github.com/benjaminRoberts01375/WrappingHStack/`
 4. Add Package
 5. Profit!
 
