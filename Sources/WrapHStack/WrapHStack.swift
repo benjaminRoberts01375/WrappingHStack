@@ -17,14 +17,14 @@ internal final class ViewRow {
 }
 
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
-struct WHStack: Layout {
+public struct WHStack: Layout {
     /// Deterrmine size of the WHStack
     /// - Parameters:
     ///   - proposal: Proposed size for the WHStack
     ///   - subviews: Views within the WHStack
     ///   - cache: Cache for placeSubviews
     /// - Returns: Size of WHStack
-    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+    public func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
         guard let proposedWidth = proposal.width else { return .zero }
         // Generate rows
         let rows: [ViewRow] = generateRows(subviews: subviews, width: proposedWidth)
@@ -39,7 +39,7 @@ struct WHStack: Layout {
         )
     }
     
-    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+    public func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
         guard !subviews.isEmpty else { return }
         let rows: [ViewRow] = generateRows(subviews: subviews, width: bounds.width)
         var currentHeight = bounds.minY
